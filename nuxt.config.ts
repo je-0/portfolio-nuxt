@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   
   // 정적 사이트 생성을 위한 설정 - SPA 모드로 변경
-  ssr: false,
+  ssr: true,
   nitro: {
     prerender: {
       routes: ['/', '/project/list'],
@@ -21,8 +21,8 @@ export default defineNuxtConfig({
   
   // 앱 설정
   app: {
-    // baseURL 설정 (정적 배포를 위해 상대 경로 사용)
-    baseURL: './',
+    // baseURL 설정 (정적 배포를 위해 빈 문자열 사용)
+    baseURL: '',
     
     head: {
       charset: 'utf-8',
