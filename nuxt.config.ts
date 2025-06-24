@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   
-  // 정적 사이트 생성을 위한 설정
-  ssr: true,
+  // 정적 사이트 생성을 위한 설정 - SPA 모드로 변경
+  ssr: false,
   nitro: {
     prerender: {
       routes: ['/', '/project/list'],
