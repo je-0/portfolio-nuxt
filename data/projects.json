@@ -1,0 +1,299 @@
+[
+  {
+    "id": "cellosquare",
+    "type": "운영",
+    "title": "첼로스퀘어 사이트 운영",
+    "description": {
+      "intro": [
+        "신규 UI 가이드 제작으로 운영 효율 향상",
+        "형상 관리가 진행 되지 않아 발생하는 문제를 GIT으로 이관하여 개발 소통 향상 및 문제 해결",
+        "운영 프로세스 확립을 통한 작업자 간의 소통 향상",
+        "4개국 언어 대응 컨텐츠 확산을 위한 가이드 및 파이선을 활용한 작업 효율 증대"
+      ],
+      "tech": [
+        "html/css/gulp/git 운영 레거시 코드 삭제 ",
+        "seo 향상을 위한 기능 개선"
+      ]
+    },
+    "link": "https://www.cello-square.com/kr/index.do",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "smasungDS",
+    "type": "운영",
+    "title": "삼성반도체 DS 사이트 운영",
+    "description": {
+      "intro": [
+        "AEM 환경 맞는 컴포넌트 작업 및 확산을 위한 확장성을 고려한 퍼블리싱",
+        "PUG 사용을 통한 컴포넌트 제작 / 포럼 마이크로 사이트 제작",
+        "6개국 사이트 운영 (언어: EN/KR/JP/CN)",
+        "반응형 퍼블리싱"
+      ],
+      "tech": [
+        "AEM/HTML/SCSS/PUG/javascirpt/git/gitlab",
+        "웹 표준, 웹접근성 마크업 진행/공통 CSS 및 컴포넌트 생성"
+      ]
+    },
+    "link": "https://semiconductor.samsung.com/kr/",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "amore",
+    "type": "운영",
+    "title": "아모레퍼시픽 사이트 운영",
+    "description": {
+      "intro": [
+        "마젠토/쇼피파이 등을 사용한 CMS 사용 및 Row Code를 사용한 다양한 인터렉션 및 퍼블리싱 수행",
+        "설화수,라네즈,헤라,한율,마몽드 등 쇼핑몰 및 브랜드 사이트 운영(27개국- 사용언어 EN/KR/JP/CN/TH/VN/MY등)",
+        "반응형/ 적응형 퍼블리싱(브랜드별 상이)"
+      ],
+      "tech": [
+        "html/scss/gulp/git을 활용한 형상관리 진행",
+        "웹 표준, 웹접근성 마크업 진행"
+      ]
+    },
+    "link": "https://www.sulwhasoo.com/kr/ko/index.html",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "lgGlobal",
+    "type": "Roll Out/ 구축",
+    "title": "LG GP1 프로젝트 글로벌 사이트 구축 및 Roll Out",
+    "description": {
+      "intro": [
+        "AEM 환경 맞는 컴포넌트 작업 및 확산을 위한 확장성을 고려한 퍼블리싱",
+        "다국어 대응 가능: (EN/KR/JP/CN/AR/VN/TH/TW/DE 등)45개국 확산 오픈 진행",
+        "pug를 사용한 컴포넌트 제작",
+        "반응형 퍼블리싱"
+      ],
+      "tech": [
+        "AEM/HTML/ SCSS/ PUG/javascirpt/git/gitlab",
+        "웹 표준, 공통 CSS 및 컴포넌트 생성"
+      ]
+    },
+    "link": "https://www.lg.com/uk/",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "atomy",
+    "type": "구축",
+    "title": "애터미 쇼핑몰 개편",
+    "description": {
+      "intro": [
+        "쇼핑몰 개편을 통한 사용자의 편의성 향상",
+        "반응형 퍼블리싱"
+      ],
+      "tech": [
+        "VUE.JS /HTML /CSS/ SCSS/ GIT / JIRA / JAVASCRIPT",
+        "웹 표준, 웹접근성 마크업 진행/공통 CSS 및 컴포넌트 생성"
+      ]
+    },
+    "link": "https://shop.atomy.com/kr",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "glovis",
+    "type": "구축",
+    "title": "현대글로비스 온라인 수출 플랫폼 구축",
+    "description": {
+      "intro": [
+        "경매 수출 플랫폼 구축/ 하이브리드 앱으로 전환 고려하여 퍼블리싱 진행",
+        "적응형 퍼블리싱"
+      ],
+      "tech": [
+        "GULP/HTML/CSS/SCSS/jQuery/JAVASCRIPT/",
+        "크로스 브라우징 체크"
+      ]
+    },
+    "link": "javascript:;",
+    "linkText": "보안상의 이유",
+    "disabled": true
+  },
+  {
+    "id": "kbarchive",
+    "type": "구축",
+    "title": "KB금융그룹(지주)의 디지털 아카이브 구축",
+    "description": {
+      "intro": [
+        "금융 지주사 디지털 아카이브 구축",
+        "PC 퍼블리싱"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery / Gulp",
+        "크로스브라우징 /웹 표준, 웹접근성 마크업 진행",
+        "리소스 폴더 구조 생성 /파일 네이밍 /공통 CSS/JS 작성"
+      ]
+    },
+    "link": "https://www.kbfg.com/Kor/about/archive/html/main/main.html",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "serveoneRenewal",
+    "type": "구축",
+    "title": "2021 서브원 리뉴얼",
+    "description": {
+      "intro": [
+        "서브원 리뉴얼을 통한 접근성 향상",
+        "적응형 퍼블리싱"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery / Gulp.js",
+        "크로스브라우징 /웹 표준, 웹접근성 마크업 진행"
+      ]
+    },
+    "link": "http://www.serveone.co.kr/kr/main.do",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "serveoneSM2021",
+    "type": "운영",
+    "title": "2021 서브원 유지보수",
+    "description": {
+      "intro": [
+        "사이트 유지보수(업데이트)",
+        "적응형 퍼블리싱"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery / Gulp.js",
+        "크로스브라우징 체크"
+      ]
+    },
+    "link": "http://www.serveone.co.kr/kr/main.do",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "samsungS",
+    "type": "구축",
+    "title": "삼성전자서비스 구축",
+    "description": {
+      "intro": [
+        "삼성전자서비스 구축을 통한 사용자 편의성 확대 및 개선",
+        "반응형 퍼블리싱"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery /Gulp.js",
+        "웹접근성 획득 / 마크업 유효성 검사 및 웹 표준/웹 접근성 마크업 진행",
+        "/ 크로스브라우징/웹접근성/UI/UX 기술 구현 가능 여부 검토"
+      ]
+    },
+    "link": "https://www.samsungsvc.co.kr/",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "Lg",
+    "type": "구축",
+    "title": "LG화학 홍보포털 – 고객불편 설문 페이지",
+    "description": {
+      "intro": [
+        "이벤트 및 고객 불편 설문 페이지 작성",
+        "PC"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery /",
+        "크로스브라우징 체크"
+      ]
+    },
+    "link": "javascript:;",
+    "linkText": "보안상의 이유",
+    "disabled": true
+  },
+  {
+    "id": "pantos",
+    "type": "운영",
+    "title": "2020년 판토스 유지보수",
+    "description": {
+      "intro": [
+        "사이트 유지보수(업데이트)",
+        "적응형 퍼블리싱"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery / Gulp.js",
+        "크로스브라우징 체크"
+      ]
+    },
+    "link": "https://www.pantos.com/kr/",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "hos",
+    "type": "구축",
+    "title": "현대차 싱가포르-호주 온라인 판매시스템구축",
+    "description": {
+      "intro": [
+        "싱가포르-호주 온라인 판매시스템 구축",
+        "적응형 퍼블리싱"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery / Gulp.js",
+        "크로스브라우징 체크"
+      ]
+    },
+    "link": "javascript:;",
+    "linkText": "보안상의 이유",
+    "disabled": true
+  },
+  {
+    "id": "serveoneSM2020",
+    "type": "운영",
+    "title": "2020년 서브원 유지보수",
+    "description": {
+      "intro": [
+        "사이트 유지보수(업데이트)",
+        "적응형 퍼블리싱"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery / Gulp.js",
+        "크로스브라우징 체크"
+      ]
+    },
+    "link": "http://www.serveone.co.kr/kr/main.do",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "inotion",
+    "type": "구축",
+    "title": "이노션 미디어바잉 옥외미디어 기능개선",
+    "description": {
+      "intro": [
+        "옥외미디어 기능개선",
+        "PC 퍼블리싱"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery /",
+        "크로스브라우징 체크"
+      ]
+    },
+    "link": "javascript:;",
+    "linkText": "보안상의 이유",
+    "disabled": true
+  },
+  {
+    "id": "ezwell",
+    "type": "구축",
+    "title": "이지웰페어 홈페이지 개편",
+    "description": {
+      "intro": [
+        "홈페이지 개편",
+        "PC 퍼블리싱"
+      ],
+      "tech": [
+        "HTML/ CSS/ jQuery /",
+        "크로스브라우징 체크"
+      ]
+    },
+    "link": "https://www.ezwell.co.kr/",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  }
+] 

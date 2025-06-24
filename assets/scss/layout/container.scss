@@ -1,0 +1,125 @@
+@use '../base/mixin' as *; 
+@use '../base/color' as *; 
+
+/* Container */
+.app-container {
+    padding-top: rem(52px, 10px);
+    padding-bottom: rem(80px, 10px);
+    > .app-content {
+        min-height: calc(100vh - rem(138px, 10px));
+        padding: 0 rem(12px, 10px);
+    }
+}
+
+@include tablet{
+    .app-container {
+        padding-top: rem(80px, 10px);
+        > .app-content {
+            min-height: auto;
+            padding: 0 rem(24px, 10px);
+        }
+    }
+}
+
+@include pc{
+    .app-container {
+        padding-top: rem(100px, 10px);
+        > .app-content {
+            min-height: auto;
+            padding: 0 rem(24px, 10px);
+        }
+    }
+}
+
+//dark mode
+body{
+    &.dark-mode{
+        background-color: $colorBlack;
+        color:$colorWhite;
+        .app-header{
+            background-color: $colorBlack;
+            .logo{
+                background-color: $colorWhite;
+            }
+        }
+        .layer-wrap{
+            .layer{
+                background-color: $colorBlack;
+                border: 1px solid $colorWhite;
+                .layer-cont {
+                    dd{
+                        color: $colorWhite;
+                    }
+                }
+            }
+            .btn-layer-close{
+                &:after,&:before{
+                    background-color: $colorWhite;
+                }
+            }
+        }
+        .btn-basic.btn-disabled{
+            color: $colorBlack;
+        }
+        .career.section{
+            .section-cont{
+                dl {
+                    dd{
+                        color:$colorWhite;
+                    }
+                }
+            }
+        }
+        .people {
+            .section-cont {
+                > ul{
+                    > li{
+                        border:1px solid $colorWhite;
+                    }
+                }
+            }
+        }
+        .app-footer{
+            background-color: $colorBlack;
+            img{
+                backdrop-filter: invert(1);
+                border-radius: 50%;
+            }
+            .btn-top{
+                background-color: $colorWhite;
+
+                color:$colorBlack;
+            }
+        }
+    }
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 rem(20px, 10px);
+    
+    &.is-fluid {
+        max-width: none;
+    }
+    
+    &.is-narrow {
+        max-width: 1200px;
+    }
+    
+    &.is-wide {
+        max-width: 1400px;
+    }
+}
+
+@include tablet {
+    .container {
+        padding: 0 rem(32px, 10px);
+    }
+}
+
+@include pc {
+    .container {
+        padding: 0 rem(40px, 10px);
+    }
+}

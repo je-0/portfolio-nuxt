@@ -1,0 +1,299 @@
+@use '../base/mixin' as *;
+@use '../base/color' as *;
+
+.pg-project {
+	.project-wrap {
+		margin-top: rem(32px, 10px);
+		.section-tit {
+			.sub-txt {
+				margin-top: rem(10px, 10px);
+				line-height: 1.4;
+				word-break: keep-all;
+				font-size: rem(14px, 10px);
+			}
+		}
+		.section-cont {
+			margin-top: rem(40px, 10px);
+			.list-head {
+				padding-bottom: rem(16px, 10px);
+				border-bottom: 1px solid $colorddd;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				span:not(.data-list-num) {
+					font-size: rem(12px, 10px);
+				}
+				.data-list-num {
+					font-size: rem(14px, 10px);
+					font-weight: 500;
+					letter-spacing: -0.1rem;
+					padding-left: rem(4px, 10px);
+				}
+				.list-type {
+					a {
+						display: inline-block;
+						padding: 0 rem(4px, 10px);
+						font-size: rem(16px, 10px);
+						&+a {
+							margin-left: rem(4px, 10px);
+						}
+						&.is-active{
+							color:$MainColor;
+						}
+					}
+				}
+			}
+
+			.project-list {
+				ul {
+					border-bottom: 1px solid $colorddd;
+					>li {
+						transition: all 0.45s ease;
+						a {
+							display: block;
+							transition: all 0.4s ease;
+							.project-type {
+								font-size: rem(14px, 10px);
+								background-color: $MainColor;
+								border-radius: rem(4px, 10px);
+								display: inline-block;
+								padding: rem(6px, 10px) rem(10px, 10px);
+								color: $colorWhite;
+							}
+							.project-name {
+								margin-top: rem(10px, 10px);
+								font-size: rem(16px, 10px);
+								font-weight: 500;
+								overflow: hidden;
+								text-overflow: ellipsis;
+								white-space: nowrap;
+							}
+							.project-date {
+								font-size: rem(12px, 10px);
+								margin-top: rem(8px, 10px);
+							}
+						}
+					}
+				}
+
+				&.type-list {
+					ul {
+						border-bottom: 1px solid $colorddd;
+						>li {
+							>a {
+								padding: rem(16px, 10px) rem(6px, 10px);
+								display: flex;
+								flex-wrap: wrap;
+								.project-type{
+									min-width: rem(100px, 10px);
+								}
+								.project-name{width: calc(100% - rem(82px, 10px));}
+
+							}
+							&+li {
+								border-top: 1px solid $colorddd;
+							}
+						}
+					}
+				}
+
+				&.type-card {
+					ul {
+						display: flex;
+						flex-wrap: wrap;
+						gap: rem(14px, 10px);
+						margin-top: rem(20px, 10px);
+						padding-bottom: rem(40px, 10px);
+						li {
+							width: calc(50% - rem(8px, 10px));
+							min-height: rem(120px, 10px);
+							>a {
+								padding: rem(20px, 10px) rem(14px, 10px);
+								>span {
+									display: block;
+								}
+								.project-type{
+									text-align: center;
+								}
+								.project-name{
+									margin-top: rem(16px, 10px);
+									text-align: center;
+								}
+								.project-date{
+									margin-top: rem(16px, 10px);
+									text-align: right;
+								}
+							}
+							border:1px solid $MainColor;
+							border-radius: rem(8px, 10px);
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+
+@include tablet{
+	.pg-project {
+		.project-wrap {
+			.section-tit {
+				.sub-txt {
+					margin-top: rem(12px, 10px);
+					font-size: rem(14px, 10px);
+				}
+			}
+			.section-cont {
+				.project-list{
+					ul {
+						>li {
+							a {
+								.project-type {
+									font-size: rem(16px, 10px);
+									background-color: $MainColor;
+									padding: rem(8px, 10px) rem(12px, 10px);
+								}
+								.project-name {
+									margin-top: rem(12px, 10px);
+									font-size: rem(18px, 10px);
+								}
+								.project-date {
+									font-size: rem(14px, 10px);
+									margin-top: rem(12px, 10px);
+								}
+							}
+						}
+					}
+					
+				&.type-list {
+					ul {
+						>li {
+							>a {
+								padding: rem(16px, 10px) rem(6px, 10px);
+								.project-type{
+									min-width: rem(115px, 10px);
+								}
+								.project-name{
+									width: calc(100% - rem(225px, 10px));
+									padding-left: rem(14px, 10px);
+								}
+								.project-date{
+									width: rem(110px, 10px);
+								}
+							}
+						}
+					}
+				}
+					&.type-card{
+						ul{
+							> li{
+								margin-top: rem(20px, 10px);
+								width: calc(50% - rem(8px, 10px));
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include pc{
+	.pg-project {
+		.project-wrap {
+			max-width: 1920px;
+			margin: 0 auto;
+			margin-top: rem(32px, 10px);
+			.section-tit{
+				font-size: rem(32px, 10px);
+				font-weight: 700;
+			}
+			.sub-txt {
+				margin-top: rem(20px, 10px);
+				font-size: rem(18px, 10px);
+			}
+			.section-cont {
+				.list-head {
+					span:not(.data-list-num) {
+						font-size: rem(14px, 10px);
+					}
+					.data-list-num {
+						font-size: rem(20px, 10px);
+					}
+					.list-type {
+						a {
+							display: inline-block;
+							padding: 0 rem(6px, 10px);
+							&+a {
+								margin-left: rem(-4px, 10px);
+							}
+						}
+					}
+				}
+				.project-list{
+					ul {
+						>li {
+							a {
+								.project-type {
+									font-size: rem(18px, 10px);
+									padding: rem(10px, 10px) rem(15px, 10px);
+								}
+								.project-name {
+									font-size: rem(20px, 10px);
+								}
+								.project-date {
+									font-size: rem(16px, 10px);
+								}
+							}
+						}
+					}
+					&.type-list{
+						ul{
+							li{
+								>a{
+									padding: rem(25px, 10px) rem(20px, 10px);
+									align-items: center;
+								.project-type {
+									padding: rem(10px, 10px) rem(15px, 10px);
+									width: rem(130px, 10px);
+								}
+								.project-name {
+									margin-top: 0;
+									width: calc(100% - rem(252px, 10px));
+									padding-left: rem(24px, 10px);
+								}
+								.project-date {
+									margin-top: 0;
+									width: rem(122px, 10px);
+								}
+								}
+							}
+						}
+					}
+					&.type-card{
+						ul{
+							gap: rem(24px, 10px);
+							> li{
+								width: calc((100% - rem(48px, 10px))/3); 
+								min-height: rem(150px, 10px);
+								> a {
+									padding: rem(32px, 10px) rem(20px, 10px);
+									.project-name{
+										margin-top: rem(26px, 10px);
+									}
+									.project-date{
+										margin-top: rem(16px, 10px);
+									}	
+								}
+								&:hover{
+									box-shadow: (10px 14px 24px rgba(0, 0, 0, 0.15));;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

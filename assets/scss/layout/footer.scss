@@ -1,0 +1,138 @@
+@use '../base/mixin' as *; 
+@use '../base/color' as *; 
+
+.app-footer{
+	position: relative;
+	background-color: $colorddd;
+	padding: rem(40px, 10px) 0;
+	margin-top: rem(80px, 10px);
+	.btn-top{
+		position: fixed;
+		bottom: rem(20px, 10px);
+		right: rem(20px, 10px);
+		width: rem(50px, 10px);
+		height: rem(50px, 10px);
+		background-color: $MainColor;
+		color: $colorWhite;
+		border: none;
+		border-radius: 50%;
+		cursor: pointer;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease;
+		z-index: 1000;
+		&.is-active{
+			opacity: 1;
+			visibility: visible;
+		}
+		i{
+			font-size: rem(20px, 10px);
+		}
+		span{
+			font-size: rem(12px, 10px);
+			display: block;
+			margin-top: rem(2px, 10px);
+		}
+	}
+	.footer-wrap{
+		max-width: 1920px;
+		margin: 0 auto;
+		padding: 0 rem(20px, 10px);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.copyright{
+			font-size: rem(14px, 10px);
+			color: $color666;
+			margin: 0;
+		}
+		.btn-box{
+			a{
+				display: inline-block;
+				width: rem(32px, 10px);
+				height: rem(32px, 10px);
+				img{
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.dark-mode-toggle{
+			display: flex;
+			align-items: center;
+			gap: rem(8px, 10px);
+			.toggle-txt{
+				font-size: rem(14px, 10px);
+				color: $color666;
+			}
+			.switch-box{
+				position: relative;
+				width: rem(50px, 10px);
+				height: rem(24px, 10px);
+				input{
+					opacity: 0;
+					width: 0;
+					height: 0;
+					&:checked + .slider-area{
+						background-color: $MainColor;
+						&:before{
+							transform: translateX(rem(26px, 10px));
+						}
+					}
+				}
+				.slider-area{
+					position: absolute;
+					cursor: pointer;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background-color: $color888;
+					transition: 0.4s;
+					border-radius: rem(24px, 10px);
+					&:before{
+						position: absolute;
+						content: "";
+						height: rem(18px, 10px);
+						width: rem(18px, 10px);
+						left: rem(3px, 10px);
+						bottom: rem(3px, 10px);
+						background-color: $colorWhite;
+						transition: 0.4s;
+						border-radius: 50%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include tablet {
+	.app-footer{
+		padding: rem(50px, 10px) 0;
+		.footer-wrap{
+			padding: 0 rem(32px, 10px);
+			.copyright{
+				font-size: rem(16px, 10px);
+			}
+			.dark-mode-toggle .toggle-txt{
+				font-size: rem(16px, 10px);
+			}
+		}
+	}
+}
+
+@include pc {
+	.app-footer{
+		padding: rem(60px, 10px) 0;
+		.footer-wrap{
+			padding: 0 rem(40px, 10px);
+			.copyright{
+				font-size: rem(14px, 10px);
+			}
+			.dark-mode-toggle .toggle-txt{
+				font-size: rem(14px, 10px);
+			}
+		}
+	}
+}
