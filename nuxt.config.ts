@@ -7,7 +7,12 @@ export default defineNuxtConfig({
   ssr: true,
   nitro: {
     prerender: {
-      routes: ['/', '/project/list']
+      routes: ['/', '/project/list'],
+      crawlLinks: true
+    },
+    // 빌드 출력 디렉토리를 dist로 변경
+    output: {
+      dir: './dist'
     }
   },
   
@@ -16,25 +21,22 @@ export default defineNuxtConfig({
   
   // 앱 설정
   app: {
-    // baseURL 설정 (배포 환경에 따라 조정)
-    baseURL: process.env.NODE_ENV === 'production' ? './' : '/',
+    // baseURL 설정 (정적 배포를 위해 상대 경로 사용)
+    baseURL: './',
     
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover',
       title: 'LIM.JE.YOUNG',
       link: [
-        { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicons/favicon_16.ico' }
+        { rel: 'shortcut icon', type: 'image/x-icon', href: './favicons/favicon_16.ico' },
+        { rel: 'stylesheet', href: './lib/swiper.min.css' }
       ],
       // 외부 스크립트 로드
       script: [
-        { src: '/lib/gsap.min.js', defer: true },
-        { src: '/lib/ScrollTrigger.js', defer: true },
-        { src: '/lib/swiper.min.js', defer: true }
-      ],
-      // 외부 CSS 로드
-      link: [
-        { rel: 'stylesheet', href: '/lib/swiper.min.css' }
+        { src: './lib/gsap.min.js', defer: true },
+        { src: './lib/ScrollTrigger.js', defer: true },
+        { src: './lib/swiper.min.js', defer: true }
       ]
     }
   },
@@ -53,6 +55,8 @@ export default defineNuxtConfig({
       rollupOptions: {
         output: {
           assetFileNames: (assetInfo) => {
+            if (!assetInfo.name) return 'assets/[name].[ext]'
+            
             const info = assetInfo.name.split('.')
             const ext = info[info.length - 1]
             
