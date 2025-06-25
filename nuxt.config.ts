@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   
-  // 정적 사이트 생성을 위한 설정 - SPA 모드로 변경
+  // SSR 활성화 (정적 사이트에서 라우팅 작동)
   ssr: true,
   nitro: {
     prerender: {
@@ -21,8 +21,8 @@ export default defineNuxtConfig({
   
   // 앱 설정
   app: {
-    // baseURL 설정 (정적 배포를 위해 빈 문자열 사용)
-    baseURL: '',
+    // baseURL 설정 (정적 배포를 위해 루트 경로 사용)
+    baseURL: '/',
     
     head: {
       charset: 'utf-8',
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
         { rel: 'shortcut icon', type: 'image/x-icon', href: './favicons/favicon_16.ico' },
         { rel: 'stylesheet', href: './lib/swiper.min.css' }
       ],
-      // 외부 스크립트 로드
+      // 외부 스크립트 로드 (ui.js 제거)
       script: [
         { src: './lib/gsap.min.js', defer: true },
         { src: './lib/ScrollTrigger.js', defer: true },
@@ -50,6 +50,14 @@ export default defineNuxtConfig({
   vite: {
     // 정적 리소스 처리
     assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg', '**/*.woff', '**/*.woff2'],
+    
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/scss/base/_mixin.scss" as *;'
+        }
+      }
+    },
     
     build: {
       rollupOptions: {

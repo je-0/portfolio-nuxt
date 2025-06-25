@@ -17,9 +17,11 @@
 import { onMounted } from "vue";
 
 onMounted(() => {
+  // intro 클래스에 is-on 추가
   const introElement = document.querySelector(".intro");
   if (introElement) {
     introElement.classList.add("is-on");
+    console.log("intro is-on 클래스 추가됨!");
   }
 });
 </script>

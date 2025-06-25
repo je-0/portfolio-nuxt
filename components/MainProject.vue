@@ -9,8 +9,6 @@
 </template>
 
 <script setup lang="js">
-import { NuxtLink } from '#components'
-
 // 프로젝트 섹션 데이터
 const projectLink = {
   path: '/project/list',
