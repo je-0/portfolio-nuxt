@@ -21,8 +21,8 @@ export default defineNuxtConfig({
   
   // 앱 설정
   app: {
-    // baseURL 설정 (정적 배포를 위해 루트 경로 사용)
-    baseURL: '/',
+    // baseURL 설정 (GitHub Pages 배포를 위해 레포지토리명 사용)
+    baseURL: '/portfolio-nuxt/',
     
     head: {
       charset: 'utf-8',
