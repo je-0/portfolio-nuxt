@@ -21,7 +21,7 @@
 const movingText = ['성', '장', '하', '는', '퍼', '블', '리', '셔']
 const name = '임제영입니다'
 const keyVisualImage = {
-  src: './images/main/bg-main.jpg',
+  src: '/images/main/bg-main.jpg',
   alt: 'keyvisual'
 }
 </script> 

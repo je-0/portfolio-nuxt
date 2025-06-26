@@ -71,6 +71,7 @@ interface ProjectDescription {
 
 interface Project {
   id: string;
+  type: string;
   title: string;
   description: ProjectDescription;
   link: string;

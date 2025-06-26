@@ -47,7 +47,7 @@ const isDarkMode = ref(false)
 const socialLinks = [
   {
     url: 'https://github.com/je-0/',
-    icon: './images/icon-github.svg',
+    icon: '/images/icon-github.svg',
     alt: 'github logo'
   }
 ]

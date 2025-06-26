@@ -22,7 +22,7 @@
 // 경력 섹션 데이터
 const sectionTitle = '경력'
 const careerImage = {
-  src: './images/main/skils.jpg',
+  src: '/images/main/skils.jpg',
   alt: 'Visual Studio screen with coding on a laptop'
 }
 const careerList = [
