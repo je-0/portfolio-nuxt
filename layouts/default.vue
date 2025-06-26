@@ -37,82 +37,82 @@ const getElements = () => {
 }
 
 // 정적 사이트 라우팅 처리
-const initStaticRouting = () => {
-  const { nuxtLinks } = getElements()
+// const initStaticRouting = () => {
+//   const { nuxtLinks } = getElements()
   
-  nuxtLinks.forEach((link) => {
-    const href = link.getAttribute('href')
+//   nuxtLinks.forEach((link) => {
+//     const href = link.getAttribute('href')
     
-    // 내부 링크인지 확인 (절대 경로이거나 상대 경로)
-    if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('#')) {
+//     // 내부 링크인지 확인 (절대 경로이거나 상대 경로)
+//     if (href && !href.startsWith('http') && !href.startsWith('mailto:') && !href.startsWith('tel:') && !href.startsWith('#')) {
       
-      // 기존 이벤트 리스너 제거
-      link.removeEventListener('click', handleLinkClick)
-      // 새 이벤트 리스너 추가
-      link.addEventListener('click', handleLinkClick)
-    }
-  })
-}
+//       // 기존 이벤트 리스너 제거
+//       link.removeEventListener('click', handleLinkClick)
+//       // 새 이벤트 리스너 추가
+//       link.addEventListener('click', handleLinkClick)
+//     }
+//   })
+// }
 
 // 링크 클릭 처리
-const handleLinkClick = (e: Event) => {
-  e.preventDefault() // 기본 동작 방지
+// const handleLinkClick = (e: Event) => {
+//   e.preventDefault() // 기본 동작 방지
   
-  const target = e.target as HTMLAnchorElement
-  const href = target.getAttribute('href')
+//   const target = e.target as HTMLAnchorElement
+//   const href = target.getAttribute('href')
   
-  if (!href) return
+//   if (!href) return
   
-  // href에서 실제 경로 추출
-  let path = href
-  if (path.startsWith('./')) {
-    path = path.substring(2)
-  } else if (path.startsWith('/')) {
-    path = path.substring(1)
-  }
+//   // href에서 실제 경로 추출
+//   let path = href
+//   if (path.startsWith('./')) {
+//     path = path.substring(2)
+//   } else if (path.startsWith('/')) {
+//     path = path.substring(1)
+//   }
   
-  console.log('페이지 이동 시도:', path)
+//   console.log('페이지 이동 시도:', path)
   
-  // 현재 페이지와 같은 링크는 무시
-  if (path === getCurrentPagePath()) {
-    console.log('현재 페이지와 동일, 이동 무시')
-    return
-  }
+//   // 현재 페이지와 같은 링크는 무시
+//   if (path === getCurrentPagePath()) {
+//     console.log('현재 페이지와 동일, 이동 무시')
+//     return
+//   }
   
-  // 페이지 이동 (현재 위치에 따라 경로 계산)
-  try {
-    let targetUrl = ''
-    const currentPath = getCurrentPagePath()
+//   // 페이지 이동 (현재 위치에 따라 경로 계산)
+//   try {
+//     let targetUrl = ''
+//     const currentPath = getCurrentPagePath()
     
-    if (path === '' || path === 'index.html') {
-      // 메인 페이지로 이동
-      if (currentPath === '') {
-        targetUrl = './index.html'
-      } else {
-        // project/list에서 메인으로
-        targetUrl = '../../index.html'
-      }
-    } else {
-      // 다른 페이지로 이동
-      if (currentPath === '') {
-        // 메인에서 project/list로
-        targetUrl = `./${path}/index.html`
-      } else {
-        // project/list에서 다른 페이지로
-        targetUrl = `../${path}/index.html`
-      }
-    }
+//     if (path === '' || path === 'index.html') {
+//       // 메인 페이지로 이동
+//       if (currentPath === '') {
+//         targetUrl = './index.html'
+//       } else {
+//         // project/list에서 메인으로
+//         targetUrl = '../../index.html'
+//       }
+//     } else {
+//       // 다른 페이지로 이동
+//       if (currentPath === '') {
+//         // 메인에서 project/list로
+//         targetUrl = `./${path}/index.html`
+//       } else {
+//         // project/list에서 다른 페이지로
+//         targetUrl = `../${path}/index.html`
+//       }
+//     }
     
-    console.log('현재 경로:', currentPath)
-    console.log('이동할 URL:', targetUrl)
-    window.location.href = targetUrl
+//     console.log('현재 경로:', currentPath)
+//     console.log('이동할 URL:', targetUrl)
+//     window.location.href = targetUrl
     
-  } catch (error) {
-    console.error('페이지 이동 실패:', error)
-    // 폴백: 일반적인 링크 동작
-    window.location.href = href
-  }
-}
+//   } catch (error) {
+//     console.error('페이지 이동 실패:', error)
+//     // 폴백: 일반적인 링크 동작
+//     window.location.href = href
+//   }
+// }
 
 // 현재 페이지 경로 가져오기
 const getCurrentPagePath = () => {
@@ -271,7 +271,7 @@ const handleDarkMode = (e: Event) => {
 // 모든 기능 초기화
 const initAll = () => {
   initIntro()
-  initStaticRouting()
+  // initStaticRouting()
   initScrollTop()
   initLayerClose()
   initDarkMode()
