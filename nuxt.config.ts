@@ -30,8 +30,7 @@ export default defineNuxtConfig({
   // 앱 설정
   app: {
     // baseURL 설정 (GitHub Pages 배포를 위해 레포지토리명 사용)
-    // 개발 모드에서는 baseURL을 사용하지 않음
-    // baseURL: process.env.NODE_ENV === 'production' ? '/portfolio-nuxt/' : '/',
+    baseURL: '/portfolio-nuxt/',
 
     head: {
       charset: "utf-8",
@@ -42,15 +41,15 @@ export default defineNuxtConfig({
         {
           rel: "shortcut icon",
           type: "image/x-icon",
-          href: "/favicons/favicon_16.ico",
+          href: "/portfolio-nuxt/favicons/favicon_16.ico",
         },
-        { rel: "stylesheet", href: "/lib/swiper.min.css" },
+        { rel: "stylesheet", href: "/portfolio-nuxt/lib/swiper.min.css" },
       ],
       // 외부 스크립트 로드 (절대 경로로 수정)
       script: [
-        { src: "/lib/gsap.min.js", defer: true },
-        { src: "/lib/ScrollTrigger.js", defer: true },
-        { src: "/lib/swiper.min.js", defer: true },
+        { src: "/portfolio-nuxt/lib/gsap.min.js", defer: true },
+        { src: "/portfolio-nuxt/lib/ScrollTrigger.js", defer: true },
+        { src: "/portfolio-nuxt/lib/swiper.min.js", defer: true },
       ],
     },
   },
