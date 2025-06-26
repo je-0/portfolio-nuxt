@@ -21,7 +21,7 @@ onMounted(() => {
   const introElement = document.querySelector(".intro");
   if (introElement) {
     introElement.classList.add("is-on");
-    console.log("intro is-on 클래스 추가됨!");
+    console.log("intro is-on 클래스 추가됨! test");
   }
 });
 </script>
