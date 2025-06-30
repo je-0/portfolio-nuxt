@@ -24,7 +24,7 @@ import { NuxtLink } from '#components'
 
 // 헤더 데이터
 const logoImage = {
-  src: '/images/logo.png',
+  src: './images/logo.png',
   alt: 'logo img'
 }
 
