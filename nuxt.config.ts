@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
 
-  // SPA 모드로 설정 (새로고침 오류 해결)
-  ssr: false,
+  // GitHub Pages 배포를 위해 SSR 활성화
+  ssr: true,
   
   // 라우팅 설정
   router: {
