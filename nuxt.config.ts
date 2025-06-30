@@ -61,6 +61,9 @@ export default defineNuxtConfig({
 
   // Vite 설정 (정적 리소스 처리)
   vite: {
+    // GitHub Pages 배포를 위한 publicPath 설정
+    base: '/portfolio-nuxt/',
+    
     // 정적 리소스 처리
     assetsInclude: [
       "**/*.png",
