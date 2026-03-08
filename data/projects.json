@@ -1,5 +1,77 @@
 [
   {
+    "id": "LGD",
+    "type": "운영",
+    "title": "LG Display 사이트 운영",
+    "description": {
+      "intro": [
+        "4개국 언어 대응 컨텐츠 확산을 위한 가이드 및 작업 효율 증대",
+        "신규 UI 가이드 제작으로 운영 효율 향상",
+        "형상 관리 진행을 통한 효과적인 운영 대응",
+        "레거시 소스에 대한 대응 및 리팩토링 진행"
+      ],
+      "tech": [
+        "html/css/gulp/git",
+        "seo 향상을 위한 기능 개선"
+      ]
+    },
+    "link": "https://www.lgdisplay.com/kor",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "theWhooUSA",
+    "type": "운영",
+    "title": "LG H&H THE-WHOO USA 운영",
+    "description": {
+      "intro": [
+        "신규 UI 가이드 제작으로 운영 효율 향상",
+        "형상 관리 진행을 통한 효과적인 운영 대응",
+        "테마 관리를 통한 운영 메뉴얼 생성",
+        "레거시 소스에 대한 대응 및 리팩토링 진행"
+      ],
+      "tech": [
+        "CMS : Shopify",
+        "언어 : Javascript/ liquid",
+        "스타일링 : SASS",
+        "애니메이션 : GSAP",
+        "UI 컴포넌트 : Swiper",
+        "형상 관리 : GIT"
+      ]
+    },
+    "link": "https://thewhoo-usa.com/",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
+    "id": "aihome",
+    "type": "구축",
+    "title": "LG AIHOME 마이크로 사이트 구축",
+    "description": {
+      "intro": [
+        "SPA(Single Page Application) 아키텍처로 페이지 전환 최적화",
+        "Styled-components를 활용한 컴포넌트 기반 스타일링",
+        "반응형 디자인 구현 (PC/Mobile)",
+        "Lottie 애니메이션을 활용한 인터랙티브 UI",
+        "모달, 토스트 팝업 등 공통 컴포넌트 설계 및 재사용",
+        "YouTube 임베드 및 비디오 재생 기능",
+        "페이지별 데이터 모듈화 및 관리"
+      ],
+      "tech": [
+        "프레임워크: React 18.2",
+        "언어: JavaScript (ES6+)",
+        "스타일링: Styled-components, SASS",
+        "라우팅: React Router DOM v6",
+        "애니메이션: GSAP, Lottie, React-Lottie-Player",
+        "UI 컴포넌트: Swiper, React-YouTube",
+        "상태 관리: React Hooks (useState, useEffect)"
+      ]
+    },
+    "link": "https://www.lge.co.kr/aihome",
+    "linkText": "사이트 바로가기",
+    "disabled": false
+  },
+  {
     "id": "cellosquare",
     "type": "운영",
     "title": "첼로스퀘어 사이트 운영",

@@ -96,10 +96,13 @@ const filteredProjects = computed(() => {
 // 프로젝트 날짜 (ID 기반으로 추정)
 const getProjectDate = (id: string) => {
   const dateMap: { [key: string]: string } = {
-    cellosquare: "2025.04 ~ 06",
-    smasungDS: "2024.06 ~ ",
-    amore: "2024.02~2024.06",
-    lgGlobal: "2023.06~2024.12",
+    LGD: "2026.01 ~ ",
+    theWhooUSA: "2026.01 ~",
+    aihome: "2025.07 ~ 2025.12",
+    cellosquare: "2025.04 ~ 2025.07",
+    smasungDS: "2024.06 ~ 2025.04 ",
+    amore: "2024.02 ~ 2024.06",
+    lgGlobal: "2023.06 ~ 2024.12",
     atomy: "2022.01~2023.03",
     glovis: "2021.08~2022.01",
     kbarchive: "2021.06~08",
